@@ -1,0 +1,21 @@
+<p>vehicle-list works!</p>
+
+<div class="row">
+    @for (item of listadoVehiculos; track item.name) {
+    <div class="col-md-3 col-12">
+        <div class="card" style="width: 18rem;">
+            <img [src]="'https://starwars-visualguide.com/assets/img/vehicles/' + item.url.split('/')[item.url.split('/').length - 2] + '.jpg'" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">{{item.name}}</h5>
+                <p class="card-text">
+                    <strong>Manufacturer:</strong> {{item.manufacturer}}<br>
+                    <strong>Cargo capacity:</strong> {{item.cargo_capacity}}<br>
+                    <strong>Length:</strong> {{item.length}}<br>
+                    <strong>Crew:</strong> {{item.crew}}<br>
+                    <strong>Passengers:</strong> {{item.passengers}}
+                </p>
+            </div>
+        </div>
+    </div>
+    }
+</div>

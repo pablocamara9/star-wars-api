@@ -1,0 +1,21 @@
+<p>people-list works!</p>
+
+<div class="row">
+    @for (item of listadoPersonajes; track item.name) {
+    <div class="col-md-3 col-12">
+        <div class="card" style="width: 18rem;">
+            <img [src]="'https://starwars-visualguide.com/assets/img/characters/' + item.url.split('/')[item.url.split('/').length - 2] + '.jpg'" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">{{item.name}}</h5>
+                <p class="card-text">
+                    <strong>Birth year:</strong> {{item.birth_year}}<br>
+                    <strong>Gender:</strong> {{item.gender}}<br>
+                    <strong>Height:</strong> {{item.height}}<br>
+                    <strong>Skin color:</strong> {{item.skin_color}}<br>
+                    <strong>Homeworld:</strong> {{item.homeworld}}
+                </p>
+            </div>
+        </div>
+    </div>
+    }
+</div>
